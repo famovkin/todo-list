@@ -10,7 +10,12 @@ const todos = [
 
 const todoListElement = document.querySelector(".todos__list");
 const todoFormElement = document.querySelector(".todos__form");
+const todoInputFormElement = todoFormElement.querySelector(".todos__input");
+const todoSumbitBtnElement =
+  todoFormElement.querySelector(".todos__submit-btn");
 const todoTemplateElement = document.querySelector(".todo-template");
+
+let editingTodo = null;
 
 todoFormElement.addEventListener("submit", addTodo);
 
@@ -29,7 +34,15 @@ function addTodo(event) {
 
   const newTodoText = event.currentTarget.querySelector(".todos__input").value;
 
-  renderTodo(newTodoText);
+  if (editingTodo) {
+    editingTodo.querySelector(".todo__text").textContent = newTodoText;
+
+    todoSumbitBtnElement.textContent = "Добавить";
+
+    editingTodo = null;
+  } else {
+    renderTodo(newTodoText);
+  }
 
   event.currentTarget.reset();
 }
@@ -54,6 +67,9 @@ function setListenersToTodo(todo) {
   todo
     .querySelector(".todo__btn_type_delete")
     .addEventListener("click", deleteTodo);
+  todo
+    .querySelector(".todo__btn_type_edit")
+    .addEventListener("click", editTodo);
 }
 
 todos.map(renderTodo);
