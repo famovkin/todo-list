@@ -63,6 +63,15 @@ function editTodo(event) {
   todoSumbitBtnElement.textContent = "Сохранить";
 }
 
+function duplicateTodo(event) {
+  const targetTodo = event.currentTarget.closest(".todo");
+  const cloneTodo = targetTodo.cloneNode(true);
+
+  setListenersToTodo(cloneTodo);
+
+  targetTodo.after(cloneTodo);
+}
+
 function setListenersToTodo(todo) {
   todo
     .querySelector(".todo__btn_type_delete")
@@ -70,6 +79,9 @@ function setListenersToTodo(todo) {
   todo
     .querySelector(".todo__btn_type_edit")
     .addEventListener("click", editTodo);
+  todo
+    .querySelector(".todo__btn_type_dublicate")
+    .addEventListener("click", duplicateTodo);
 }
 
 todos.map(renderTodo);
