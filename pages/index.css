@@ -12,9 +12,9 @@
 @import url(../blocks/todos/__input/todos__input.css);
 @import url(../blocks/todos/__submit-btn/todos__submit-btn.css);
 @import url(../blocks/todos/__todo/todos__todo.css);
+@import url(../blocks/todos/__form/todos__form.css);
 
 @import url(../blocks/todo/todo.css);
-@import url(../blocks/todo/__form/todo__form.css);
 @import url(../blocks/todo/__text/todo__text.css);
 @import url(../blocks/todo/__btn/todo__btn.css);
 @import url(../blocks/todo/__btn/_type/todo__btn_type_edit.css);
