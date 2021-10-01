@@ -13,3 +13,17 @@
 .todos__submit-btn:hover {
   opacity: .6;
 }
+
+@media (max-width: 768px) {
+  .todos__submit-btn {
+    padding: 15px 11px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .todos__submit-btn {
+    padding: 9px;
+    font-size: 16px;
+  }
+}
