@@ -18,20 +18,22 @@
           <button class="todos__submit-btn">Добавить</button>
         </form>
         <ul class="todos__list">
-          <li class="todo todos__todo">
-            <p class="todo__text">Почистить зубы</p>
-            <div class="todo__buttons">
-              <button class="todo__btn todo__btn_type_edit"></button>
-              <button class="todo__btn todo__btn_type_dublicate"></button>
-              <button class="todo__btn todo__btn_type_delete"></button>
-            </div>
-          </li>
         </ul>
       </section>
       <footer class="footer page__footer">
         <div class="footer__title">&#169; 2021. Фам Толя</div>
       </footer>
     </div>
+    <template class="todo-template">
+      <li class="todo todos__todo">
+        <p class="todo__text"></p>
+        <div class="todo__buttons">
+          <button class="todo__btn todo__btn_type_edit"></button>
+          <button class="todo__btn todo__btn_type_dublicate"></button>
+          <button class="todo__btn todo__btn_type_delete"></button>
+        </div>
+      </li>
+    </template>
     <script src="script.js"></script>
   </body>
 </html>
