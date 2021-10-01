@@ -19,6 +19,8 @@ function renderTodo(todoText) {
 
   newTodo.querySelector(".todo__text").textContent = todoText;
 
+  setListenersToTodo(newTodo);
+
   todoListElement.prepend(newTodo);
 }
 
@@ -30,6 +32,28 @@ function addTodo(event) {
   renderTodo(newTodoText);
 
   event.currentTarget.reset();
+}
+
+function deleteTodo(event) {
+  const todo = event.currentTarget.closest(".todo");
+  todo.remove();
+}
+
+function editTodo(event) {
+  const todo = event.currentTarget.closest(".todo");
+
+  editingTodo = todo;
+
+  todoInputFormElement.value =
+    editingTodo.querySelector(".todo__text").textContent;
+
+  todoSumbitBtnElement.textContent = "Сохранить";
+}
+
+function setListenersToTodo(todo) {
+  todo
+    .querySelector(".todo__btn_type_delete")
+    .addEventListener("click", deleteTodo);
 }
 
 todos.map(renderTodo);
