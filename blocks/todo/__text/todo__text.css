@@ -3,7 +3,6 @@
   flex-grow: 1;
   text-align: start;
   font-size: 23px;
-  text-align: justify;
 }
 
 @media (max-width: 768px) {
