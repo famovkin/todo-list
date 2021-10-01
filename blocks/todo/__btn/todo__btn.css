@@ -20,3 +20,11 @@
 .todo__btn:last-of-type {
   margin: 0;
 }
+
+@media (max-width: 520px) {
+  .todo__btn {
+    margin: 0 0 8px;
+    width: 18px;
+    height: 18px;
+  }
+}

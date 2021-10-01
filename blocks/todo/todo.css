@@ -11,3 +11,16 @@
 .todo:hover {
   border: 1px solid #fff;
 }
+
+@media (max-width: 630px) {
+  .todo {
+    padding: 25px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .todo {
+    padding: 16px;
+  }
+}

@@ -1,3 +1,11 @@
 .todo__buttons {
   min-width: 105px;
 }
+
+@media (max-width: 520px) {
+  .todo__buttons {
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+  }
+}
