@@ -1,0 +1,15 @@
+.todos__submit-btn {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 19px 27px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+
+.todos__submit-btn:hover {
+  opacity: .6;
+}

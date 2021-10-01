@@ -1,0 +1,13 @@
+.todo {
+  display: flex;
+  padding: 36px;
+  gap: 10px;
+  border: 1px solid #6f6f6f;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .2s ease-in;
+}
+
+.todo:hover {
+  border: 1px solid #fff;
+}

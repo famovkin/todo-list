@@ -1,0 +1,24 @@
+@import url(../vendor/normalize.css);
+
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/__content/page__content.css);
+@import url(../blocks/page/__header/page__header.css);
+@import url(../blocks/page/__footer/page__footer.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+
+@import url(../blocks/todos/__list/todos__list.css);
+@import url(../blocks/todos/__input/todos__input.css);
+@import url(../blocks/todos/__submit-btn/todos__submit-btn.css);
+@import url(../blocks/todos/__todo/todos__todo.css);
+
+@import url(../blocks/todo/todo.css);
+@import url(../blocks/todo/__form/todo__form.css);
+@import url(../blocks/todo/__text/todo__text.css);
+@import url(../blocks/todo/__btn/todo__btn.css);
+@import url(../blocks/todo/__btn/_type/todo__btn_type_edit.css);
+@import url(../blocks/todo/__btn/_type/todo__btn_type_dublicate.css);
+@import url(../blocks/todo/__btn/_type/todo__btn_type_delete.css);
+
+@import url(../blocks/footer/__title/footer__title.css);

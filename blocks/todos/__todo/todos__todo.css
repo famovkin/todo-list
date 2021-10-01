@@ -1,0 +1,7 @@
+.todos__todo {
+  margin-bottom: 10px;
+}
+
+.todos__todo:last-of-type {
+  margin: 0;
+}

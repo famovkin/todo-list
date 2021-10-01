@@ -1,0 +1,6 @@
+.todo__text {
+  margin: 0;
+  flex-grow: 1;
+  text-align: start;
+  font-size: 23px;
+}

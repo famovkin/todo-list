@@ -1,0 +1,8 @@
+.todos__form {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 23px;
+}
