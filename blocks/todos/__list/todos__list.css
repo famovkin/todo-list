@@ -3,7 +3,7 @@
   padding-right: 10px;
   overflow: auto;
   height: calc(100vh - 270px);
-  margin: 0;
+  margin: 0 0 25px;
 }
 
 .todos__list::-webkit-scrollbar {
@@ -20,9 +20,16 @@
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  .todos__list {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 520px) {
   .todos__list {
     height: calc(100vh - 290px);
+    margin-bottom: 33px
   }
   .todos__list::-webkit-scrollbar {
     width: 7px;
