@@ -80,7 +80,7 @@ function setListenersToTodo(todo) {
     .querySelector(".todo__btn_type_edit")
     .addEventListener("click", editTodo);
   todo
-    .querySelector(".todo__btn_type_dublicate")
+    .querySelector(".todo__btn_type_duplicate")
     .addEventListener("click", duplicateTodo);
 }
 
