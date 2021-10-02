@@ -19,12 +19,26 @@ let editingTodo = null;
 
 todoFormElement.addEventListener("submit", addTodo);
 
+document.body.addEventListener("click", (event) => {
+  const todo = event.target.closest(".todo");
+
+  if (!todo) {
+    return;
+  }
+
+  if (event.target.classList.contains("todo__btn_type_edit")) {
+    editTodo(todo);
+  } else if (event.target.classList.contains("todo__btn_type_delete")) {
+    deleteTodo(todo);
+  } else if (event.target.classList.contains("todo__btn_type_duplicate")) {
+    duplicateTodo(todo);
+  }
+});
+
 function renderTodo(todoText) {
   const newTodo = todoTemplateElement.content.cloneNode(true);
 
   newTodo.querySelector(".todo__text").textContent = todoText;
-
-  setListenersToTodo(newTodo);
 
   todoListElement.prepend(newTodo);
 }
@@ -47,14 +61,11 @@ function addTodo(event) {
   event.currentTarget.reset();
 }
 
-function deleteTodo(event) {
-  const todo = event.currentTarget.closest(".todo");
+function deleteTodo(todo) {
   todo.remove();
 }
 
-function editTodo(event) {
-  const todo = event.currentTarget.closest(".todo");
-
+function editTodo(todo) {
   editingTodo = todo;
 
   todoInputFormElement.value =
@@ -63,25 +74,10 @@ function editTodo(event) {
   todoSumbitBtnElement.textContent = "Сохранить";
 }
 
-function duplicateTodo(event) {
-  const targetTodo = event.currentTarget.closest(".todo");
+function duplicateTodo(targetTodo) {
   const cloneTodo = targetTodo.cloneNode(true);
 
-  setListenersToTodo(cloneTodo);
-
   targetTodo.after(cloneTodo);
-}
-
-function setListenersToTodo(todo) {
-  todo
-    .querySelector(".todo__btn_type_delete")
-    .addEventListener("click", deleteTodo);
-  todo
-    .querySelector(".todo__btn_type_edit")
-    .addEventListener("click", editTodo);
-  todo
-    .querySelector(".todo__btn_type_duplicate")
-    .addEventListener("click", duplicateTodo);
 }
 
 todos.map(renderTodo);
