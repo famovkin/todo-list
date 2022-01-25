@@ -56,6 +56,8 @@ npm run dev или yarn run dev
 
 ## Системные требования
 
+Для запуска потребуется Node.js версии 16.13.0.
+
 ## Ссылка на GitHub Pages
 
 https://famovkin.github.io/todo-list/
